@@ -1,0 +1,232 @@
+.wrapper {
+  position: relative;
+  padding: 2rem 4rem;
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(178, 216, 117, 0.18),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(105, 177, 86, 0.12),
+      transparent 42%
+    ),
+    #0a0c12;
+  overflow: hidden;
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  position: absolute;
+  inset: auto;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  animation: ambientPulse 11s ease-in-out infinite alternate;
+}
+
+.wrapper::before {
+  width: 55vw;
+  height: 55vw;
+  left: 50%;
+  top: -15%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    circle,
+    rgba(130, 214, 121, 0.28),
+    rgba(75, 150, 68, 0.14),
+    transparent 68%
+  );
+}
+
+.wrapper::after {
+  width: 46vw;
+  height: 46vw;
+  left: 50%;
+  top: 28%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    circle,
+    rgba(240, 193, 86, 0.22),
+    rgba(168, 120, 34, 0.12),
+    transparent 66%
+  );
+  animation-delay: 1.4s;
+}
+
+@keyframes ambientPulse {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-50%) scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.08);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(1.02);
+  }
+}
+
+.main-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 93vh;
+  padding: 2rem 2rem 6rem;
+  border-radius: 1rem;
+  background-image:
+    linear-gradient(rgba(5, 18, 10, 0.3), rgba(8, 12, 18, 0.75)),
+    url("../assets/Dr_ Doom.jpeg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 60px rgba(12, 30, 20, 0.7),
+    0 0 40px rgba(52, 110, 78, 0.35),
+    0 0 90px rgba(201, 145, 43, 0.15);
+}
+
+.main-container::before,
+.main-container::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.main-container::before {
+  inset: -18% auto auto 50%;
+  width: 500px;
+  height: 500px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(251, 227, 144, 0.96) 0%,
+    rgba(231, 171, 58, 0.8) 18%,
+    rgba(147, 210, 118, 0.42) 34%,
+    rgba(15, 49, 28, 0.12) 55%,
+    transparent 72%
+  );
+  box-shadow:
+    0 0 30px rgba(255, 220, 120, 0.8),
+    0 0 80px rgba(133, 210, 98, 0.4),
+    0 0 120px rgba(85, 134, 64, 0.3);
+  filter: blur(8px);
+  transform-origin: center;
+  animation: sunOrbit 16s linear infinite;
+}
+
+.main-container::after {
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(10, 30, 16, 0.2),
+    rgba(204, 163, 76, 0.12),
+    rgba(13, 42, 24, 0.18),
+    rgba(0, 0, 0, 0.1)
+  );
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
+@keyframes sunOrbit {
+  0% {
+    transform: translateX(-50%) rotate(0deg) scale(0.95);
+    opacity: 0.92;
+  }
+  25% {
+    transform: translateX(-50%) rotate(90deg) scale(1.04);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) rotate(180deg) scale(1.1);
+    opacity: 0.96;
+  }
+  75% {
+    transform: translateX(-50%) rotate(270deg) scale(1.04);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg) scale(0.95);
+    opacity: 0.92;
+  }
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-size: clamp(5rem, 18vw, 18rem);
+  line-height: 0.8;
+  font-weight: 900;
+  font-family: "Bebas Neue", "Arial Black", sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(
+    180deg,
+    #fff7d6 0%,
+    #f4d27d 18%,
+    #c8912b 38%,
+    #7d5520 52%,
+    #fff3c4 65%,
+    #a06d1d 82%,
+    #1a1f26 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 1.5px rgba(20, 20, 20, 0.8);
+  text-shadow:
+    0 0 18px rgba(255, 204, 92, 0.38),
+    0 0 42px rgba(153, 91, 20, 0.42);
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.8));
+  transform: translateY(0.2em);
+  overflow: hidden;
+}
+
+.title::before {
+  content: "DOOM";
+  position: absolute;
+  inset: 0;
+  display: block;
+  color: transparent;
+  background: linear-gradient(
+    180deg,
+    #f8f7ef 0%,
+    #d9ba70 18%,
+    #79a666 48%,
+    #d4a94b 70%,
+    #fdf4d0 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 1.5px rgba(20, 20, 20, 0.8);
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+  animation: textReveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes textReveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 0;
+  }
+}
