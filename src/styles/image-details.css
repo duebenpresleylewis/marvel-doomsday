@@ -10,17 +10,29 @@
   min-height: 100vh;
 }
 
+.right {
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+}
+
 .left {
   height: 100vh;
 }
 
-.image-container {
+.image-container.RDJ {
   width: 100%;
   height: 100%;
   background-image: url("../assets/rdj.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.doom-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 @media (max-width: 768px) {
