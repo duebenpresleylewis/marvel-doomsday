@@ -283,15 +283,43 @@
       </section>
 
       <!-- Avengers Poster -->
-      <section class="avengers-poster-section h-screen flex items-center justify-center w-screen bg-white">
-        <div class="avengers-poster-container">
+      <section class="avengers-poster-section ">
+        <div class="avengers-poster1">
           <img
-            src="./src/assets/avengers-poster.jpeg"
+            src="./src/assets/avengers-poster.jpg"
             alt="Avengers Doomsday Poster"
             class="avengers-poster-image"
           />
         </div>
+        <div class="avengers-poster2">
+          <img
+            src="./src/assets/avengers-poster2.jpeg"
+            alt="Avengers Doomsday Poster 2"
+            class="avengers-poster-image"
+          />
+        </div>
       </section>
+
+      <!-- marvel logo, with countdown -->
+      <section class="marvel-logo-section h-screen flex flex-col items-center justify-center gap-y-20">
+        <div class="marvel-logo-container">
+          <img
+            src="./src/assets/marvel-logo.png"
+            alt="Marvel Logo"
+            class="marvel-logo-image p-9"
+          />
+        </div>
+        <div class="countdown-container">
+          <p class="countdown-text">Countdown to Doomsday:</p>
+          <div class="countdown-timer" id="countdown-timer">
+            <span id="days" class="countdown-number text-slate-900">00</span> Days
+            <span id="hours" class="countdown-number text-slate-900">00</span> Hours
+            <span id="minutes" class="countdown-number text-slate-900">00</span> Minutes
+            <span id="seconds" class="countdown-number text-slate-900">00</span> Seconds
+          </div>
+        </div>
+      </section>
+        
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -1,0 +1,60 @@
+.avengers-poster-section {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.avengers-poster1,
+.avengers-poster2 {
+  flex: 1 1 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.avengers-poster-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.marvel-logo-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at center,
+    rgba(136, 255, 180, 0.34),
+    rgba(65, 129, 105, 0.24) 18%,
+    rgba(118, 131, 134, 0.3) 35%,
+    rgba(23, 27, 29, 0.92) 60%,
+    rgba(8, 10, 11, 1) 100%
+  );
+  overflow: hidden;
+}
+
+.marvel-logo-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.08),
+    transparent 58%
+  );
+  pointer-events: none;
+}
+
+.marvel-logo-container,
+.countdown-container {
+  position: relative;
+  z-index: 1;
+}

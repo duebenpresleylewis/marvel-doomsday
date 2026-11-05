@@ -16,7 +16,7 @@
 }
 
 .left {
-  height: 100vh;
+  overflow: hidden;
 }
 
 .image-container.RDJ {
