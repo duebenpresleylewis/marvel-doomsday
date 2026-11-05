@@ -83,7 +83,7 @@
   border-radius: 1rem;
   background-image:
     linear-gradient(rgba(5, 18, 10, 0.3), rgba(8, 12, 18, 0.75)),
-    url("../assets/Dr_ Doom.jpeg");
+    url("../assets/image.png");
   background-size: cover;
   background-position: center;
   overflow: hidden;
