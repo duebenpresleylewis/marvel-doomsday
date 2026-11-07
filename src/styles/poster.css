@@ -58,3 +58,8 @@
   position: relative;
   z-index: 1;
 }
+
+.marvel-logo-image {
+  width: min(1080px, 90vw);
+  height: auto;
+}

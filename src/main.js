@@ -2,8 +2,6 @@ import "./style.css";
 import "./styles/hero.css";
 import "./styles/image-details.css";
 import "./styles/poster.css";
-const app = document.querySelector("#app");
+import { initializeCounter } from "./scripts/counter.js";
 
-// app.innerHTML = `
-
-// `;
+const intervalId = setInterval(() => {initializeCounter(intervalId)}, 1000);
