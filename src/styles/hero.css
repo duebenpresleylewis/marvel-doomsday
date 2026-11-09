@@ -230,3 +230,44 @@
     opacity: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 1rem;
+  }
+
+  .main-container {
+    min-height: 78vh;
+    min-height: 78svh;
+    padding: 1.5rem 1rem 4rem;
+    border-radius: 0.75rem;
+    background-position: 54% center;
+  }
+
+  .main-container::before {
+    width: min(80vw, 500px);
+    height: min(80vw, 500px);
+  }
+
+  .title {
+    font-size: clamp(4rem, 19vw, 9rem);
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrapper {
+    padding: 0.5rem;
+  }
+
+  .main-container {
+    min-height: 72vh;
+    min-height: 72svh;
+    padding-inline: 0.5rem;
+  }
+
+  .title {
+    font-size: clamp(3.5rem, 18vw, 5rem);
+    letter-spacing: 0.08em;
+  }
+}
